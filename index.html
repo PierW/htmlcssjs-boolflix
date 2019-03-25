@@ -5,12 +5,24 @@
     <title>Boolflix</title>
     <!-- Importo Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Importo Handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js" charset="utf-8"></script>
     <!-- Importo mio js -->
     <script src="script.js" charset="utf-8"></script>
     <!-- Importo mio css -->
     <link rel="stylesheet" href="style.css">
+    <script id="li" type="text/x-handlebars-template">
+      <li> TITOLO: {{ titolo }} <br> TITOLO ORIGINALE: {{ titolo_originale}} <br> LINGUA: {{ lingua }} <br> VOTO: {{ voto }}</li>
+    </script>
   </head>
   <body>
-
+  <div class="container">
+    <h1>Boolflix</h1>
+    <input type="text" name="" value="" placeholder="Cerca film...">
+    <button type="button" name="button">CERCA</button>
+    <h3 id="nresults"></h3>
+    <ul>
+    </ul>
+  </div>
   </body>
 </html>
