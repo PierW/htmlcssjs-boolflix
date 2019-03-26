@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Boolflix</title>
+    <!-- Importo fontawsame -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- Importo Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Importo Handlebars -->
@@ -12,7 +14,9 @@
     <!-- Importo mio css -->
     <link rel="stylesheet" href="style.css">
     <script id="li" type="text/x-handlebars-template">
-      <li> TITOLO: {{ titolo }} <br> TITOLO ORIGINALE: {{ titolo_originale}} <br> LINGUA: {{ lingua }} <br> VOTO: {{ voto }}</li>
+      <li> TITOLO: {{ titolo }} <br> TITOLO ORIGINALE: {{ titolo_originale}} <br> LINGUA: {{ lingua }} <br> VOTO: {{ voto }} <br>
+        <i class="far fa-star check"></i><i class="far fa-star check"></i><i class="far fa-star check"></i><i class="far fa-star check"></i><i class="far fa-star check"></i>
+      </li>
     </script>
   </head>
   <body>
@@ -20,9 +24,10 @@
     <h1>Boolflix</h1>
     <input type="text" name="" value="" placeholder="Cerca film...">
     <button type="button" name="button">CERCA</button>
+    <!-- Inserisco risultati totali -->
     <h3 id="nresults"></h3>
-    <ul>
-    </ul>
+    <!-- Inserisco singoli risultati -->
+    <ul></ul>
   </div>
   </body>
 </html>
