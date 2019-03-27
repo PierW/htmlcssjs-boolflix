@@ -104,7 +104,8 @@ function outputData(object, type) {
         titolo : result.title,
         titolo_originale : result.original_title,
         lingua : "<span class='flag-icon flag-icon-" + iconLangue +  "' title='" + titleLangue + "'></span>",
-        voto : result.vote_average
+        voto : result.vote_average,
+        urlimg : result.poster_path
       };
     } else if (type === "serie") {
 
@@ -112,7 +113,8 @@ function outputData(object, type) {
         titolo : result.name,
         titolo_originale : result.original_name,
         lingua : "<span class='flag-icon flag-icon-" + iconLangue +  "' title='" + titleLangue + "'></span>",
-        voto : result.vote_average
+        voto : result.vote_average,
+        urlimg : result.poster_path
       };
     }
 
