@@ -16,3 +16,9 @@ ul{
 li{
   margin-bottom: 20px;
 }
+
+.flag-icon-unknown{
+  background-image: url("img/unknown.svg");
+  height: 1.5em;
+  line-height: 1.5em;
+}

@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Boolflix</title>
+    <!-- Importo flag-icon-css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/css/flag-icon.min.css">
     <!-- Importo fontawsame -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- Importo Jquery -->
@@ -14,7 +16,7 @@
     <!-- Importo mio css -->
     <link rel="stylesheet" href="style.css">
     <script id="li" type="text/x-handlebars-template">
-      <li> TITOLO: {{ titolo }} <br> TITOLO ORIGINALE: {{ titolo_originale}} <br> LINGUA: {{ lingua }} <br> VOTO: {{ voto }} <br>
+      <li> TITOLO: {{ titolo }} <br> TITOLO ORIGINALE: {{ titolo_originale}} <br> LINGUA: {{{ lingua }}} <br> VOTO: {{ voto }} <br>
         <i class="far fa-star check"></i><i class="far fa-star check"></i><i class="far fa-star check"></i><i class="far fa-star check"></i><i class="far fa-star check"></i>
       </li>
     </script>

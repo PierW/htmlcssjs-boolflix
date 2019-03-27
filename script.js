@@ -53,12 +53,15 @@ function outputData(object) {
       li.remove();
 
   for (var i = 0; i < results.length; i++) {
-
+// <span class='flag-icon flag-icon-it' title='italia'></span>
     var result = results[i];
+    var titleLangue =  result.original_language;
+    var iconLangue = getIcon(titleLangue);
+
     var data = {
       titolo : result.title,
       titolo_originale : result.original_title,
-      lingua : result.original_language,
+      lingua : "<span class='flag-icon flag-icon-" + iconLangue +  "' title='" + titleLangue + "'></span>",
       voto : result.vote_average
     }
 
@@ -91,6 +94,24 @@ function fillStars(number) {
     }
   }
   stars.removeClass("check") //CLASSE DI CONTROLLO - MI GARANTISCO CHE AD OGNI GIRO HO SOLO IL TEMPLATE CHE STO PER SCRIVERE
+}
+
+function getIcon(string) {
+
+var res = "";
+
+  switch (string) {
+
+    case "en":
+      res = "gb";
+      break;
+    case "it":
+      res = "it";
+      break;
+    default:
+      res = "unknown";
+  }
+  return res;
 }
 
 function init() {
