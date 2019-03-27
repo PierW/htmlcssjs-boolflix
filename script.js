@@ -1,15 +1,19 @@
 $(document).ready(init);
 
+
 function getTitle() {
 
   var input = $("input");
   var type = $("select");
+  var counter = $("#nresults");
+  var li = $(".container li");
+      li.remove();
+      counter.text("");
+      counter.html("Risultati trovati: <span id='counter'>0</span>");
 
   var typeVal = type.val();
   var value = input.val();
 
-  var li = $(".container li");
-      li.remove();
 
   if (typeVal === "film") {
     getFilm(value);
@@ -55,7 +59,6 @@ function getFilm(string) {
   });
 }
 
-
 function getSerie(string) {
 
   $.ajax({
@@ -78,16 +81,16 @@ function getSerie(string) {
   });
 }
 
-
 function outputData(object, type) {
 
   var source = $("#li").html();
-  var nresults = $("#nresults");
   var template = Handlebars.compile(source);
   var numberResults = object.total_results;
   var results = object.results;
   var container = $("ul");
-      nresults.html("Risultati trovati: <span id='counter'>" + numberResults + "</span>");
+  var countElement = $("#counter");
+  var counter = Number(countElement.text());
+      countElement.text(counter + numberResults);
 
   for (var i = 0; i < results.length; i++) {
 
@@ -161,6 +164,9 @@ var res = "";
   }
   return res;
 }
+
+
+
 
 function init() {
 
