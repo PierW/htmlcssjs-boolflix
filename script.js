@@ -3,8 +3,24 @@ $(document).ready(init);
 function getTitle() {
 
   var input = $("input");
+  var type = $("select");
+
+  var typeVal = type.val();
   var value = input.val();
-  getFilm(value);
+
+  var li = $(".container li");
+      li.remove();
+
+  if (typeVal === "film") {
+    getFilm(value);
+  }
+  else if (typeVal === "serie"){
+    getSerie(value);
+  } else {
+    getFilm(value);
+    getSerie(value);
+  }
+
   input.val("");
 }
 
@@ -29,17 +45,41 @@ function getFilm(string) {
     method : "GET",
     success : function(data, stato) {
 
-      outputData(data);
+      var type = "film";
+      outputData(data, type);
     },
     error : function(richiesta, stato, errori) {
 
-      alert("Problemi di connezzione");
+      alert("Problemi di connessione");
     }
   });
 }
 
 
-function outputData(object) {
+function getSerie(string) {
+
+  $.ajax({
+    url: "https://api.themoviedb.org/3/search/tv",
+    data : {
+      api_key : "5a8d10395cbc81449d13da7027ca58cc",
+      language : "it-IT",
+      query : string
+    },
+    method : "GET",
+    success : function(data, stato) {
+
+      var type = "serie";
+      outputData(data, type);
+    },
+    error : function(richiesta, stato, errori) {
+
+      alert("Problemi di connessione");
+    }
+  });
+}
+
+
+function outputData(object, type) {
 
   var source = $("#li").html();
   var nresults = $("#nresults");
@@ -47,22 +87,30 @@ function outputData(object) {
   var numberResults = object.total_results;
   var results = object.results;
   var container = $("ul");
-      nresults.text("Risultati trovati: " + numberResults);
-
-  var li = $(".container li");
-      li.remove();
+      nresults.html("Risultati trovati: <span id='counter'>" + numberResults + "</span>");
 
   for (var i = 0; i < results.length; i++) {
-// <span class='flag-icon flag-icon-it' title='italia'></span>
+
     var result = results[i];
     var titleLangue =  result.original_language;
     var iconLangue = getIcon(titleLangue);
 
-    var data = {
-      titolo : result.title,
-      titolo_originale : result.original_title,
-      lingua : "<span class='flag-icon flag-icon-" + iconLangue +  "' title='" + titleLangue + "'></span>",
-      voto : result.vote_average
+    if (type === "film") {
+
+      var data = {
+        titolo : result.title,
+        titolo_originale : result.original_title,
+        lingua : "<span class='flag-icon flag-icon-" + iconLangue +  "' title='" + titleLangue + "'></span>",
+        voto : result.vote_average
+      };
+    } else if (type === "serie") {
+
+      var data = {
+        titolo : result.name,
+        titolo_originale : result.original_name,
+        lingua : "<span class='flag-icon flag-icon-" + iconLangue +  "' title='" + titleLangue + "'></span>",
+        voto : result.vote_average
+      };
     }
 
     var fullHtml = template(data);
