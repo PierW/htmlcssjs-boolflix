@@ -2,7 +2,11 @@
 <html lang="it" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <!-- Importo responsive meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Boolflix</title>
+    <!-- Importo bootsrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Importo flag-icon-css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/css/flag-icon.min.css">
     <!-- Importo fontawsame -->
@@ -16,14 +20,14 @@
     <!-- Importo mio css -->
     <link rel="stylesheet" href="style.css">
     <script id="li" type="text/x-handlebars-template">
-      <li>
+      <li class="mb-5 col-md-4 col-xl-3">
         <img src="{{ urlimg }}">
         <p>TITOLO: {{ titolo }} <br> TITOLO ORIGINALE: {{ titolo_originale}} <br> LINGUA: {{{ lingua }}} <br> VOTO: {{ voto }}</p>
         <i class="far fa-star check"></i><i class="far fa-star check"></i><i class="far fa-star check"></i><i class="far fa-star check"></i><i class="far fa-star check"></i>
       </li>
     </script>
   </head>
-  <body>
+  <body class="bg-dark text-white text-center">
   <div class="container">
     <h1>Boolflix</h1>
     <input type="text" name="" value="" placeholder="Cerca...">
@@ -36,7 +40,7 @@
     <!-- Inserisco risultati totali -->
     <h3 id="nresults"></h3>
     <!-- Inserisco singoli risultati -->
-    <ul></ul>
+    <ul class="list-unstyled row"></ul>
   </div>
   </body>
 </html>

@@ -129,7 +129,7 @@ var res = "";
   return res;
 }
 
-// INIZIO MAXI FUNZIONE PER MANDAR EIN OUTPUT TUTTO
+// INIZIO MAXI FUNZIONE PER MANDARE IN OUTPUT TUTTO
 function outputData(object, type) {
 
   var source = $("#li").html();
