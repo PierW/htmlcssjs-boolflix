@@ -11,3 +11,52 @@ p{
 .fas{
   color: #FFB400;
 }
+
+
+#title, .inputstyle, .container-home{
+  transition: all .5s ease-out;
+}
+
+
+#title.start{
+  font-size: 100px;
+}
+
+.inputstyle, select{
+  height: 48px;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.inputstyle{
+  border: 0;
+  width: 120px;
+}
+
+.inputstyle:focus{
+  background-color: black;
+  color: white;
+  width: 300px;
+}
+
+.container-home{
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.container-home.start{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ajaxcontainer{
+  margin-top: 200px;
+  display: none;
+}

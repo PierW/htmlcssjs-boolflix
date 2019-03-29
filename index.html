@@ -29,18 +29,26 @@
   </head>
   <body class="bg-dark text-white text-center">
   <div class="container">
-    <h1>Boolflix</h1>
-    <input type="text" name="" value="" placeholder="Cerca...">
-    <select>
-      <option value="film">Film</option>
-      <option value="serie">Serie Tv</option>
-      <option value="tutti">Tutti</option>
-    </select>
-    <button type="button" name="button">CERCA</button>
+    <div class="container-home start">
+      <div class="up">
+        <h1 id="title" class="mb-0 start">Boolflix</h1>
+      </div>
+      <div class="down">
+        <input class="inputstyle" type="text" name="" value="" placeholder="Cerca...">
+        <select>
+          <option value="film">Film</option>
+          <option value="serie">Serie Tv</option>
+          <option value="tutti">Tutti</option>
+        </select>
+        <button class="btn btn-secondary btn-lg mb-1" type="button" name="button">CERCA</button>
+      </div>
+    </div>
     <!-- Inserisco risultati totali -->
-    <h3 id="nresults"></h3>
-    <!-- Inserisco singoli risultati -->
-    <ul class="list-unstyled row"></ul>
+    <div class="ajaxcontainer">
+      <h3 id="nresults"></h3>
+      <!-- Inserisco singoli risultati -->
+      <ul class="list-unstyled row mt-5"></ul>
+    </div>
   </div>
   </body>
 </html>

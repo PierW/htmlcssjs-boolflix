@@ -3,6 +3,7 @@ $(document).ready(init);
 //INIZIO FUNZIONE CHE INDIRIZZA L'INPUT DELL'UTENTE ALLE FUNZIONI GIUSTE
 function getTitle() {
 
+  firstEffect(); //AGGIUNGO EFFETTI ALLA PRIMA RICERCA
   var input = $("input");
   var type = $("select");
   var counter = $("#nresults");
@@ -182,6 +183,16 @@ function outputData(object, type) {
   }                       //LE CLASSI (STELLA PIENA STELLA VUOTA) GRAZIE ALLA CLASSE DI CONTROLLO .CHECK
 }
 
+
+function firstEffect() {
+
+  var bool = $("#title").hasClass("start");
+  if (bool) {
+      $("#title").removeClass("start");
+      $(".container-home").removeClass("start");
+      $(".ajaxcontainer").fadeIn(2000);
+  }
+}
 
 function init() {
 
