@@ -153,7 +153,7 @@ function outputData(object, type) {
       if (result.poster_path == null) {
         var poster = "https://zadroweb.com/wp-content/uploads/2013/07/page-not-found-300x270.jpg"
       } else {
-        var poster = "https://image.tmdb.org/t/p/w185" + result.poster_path;
+        var poster = "https://image.tmdb.org/t/p/w300" + result.poster_path;
       }
 
       if (type === "film") {

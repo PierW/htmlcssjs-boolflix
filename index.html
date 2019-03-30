@@ -21,9 +21,13 @@
     <link rel="stylesheet" href="style.css">
     <script id="li" type="text/x-handlebars-template">
       <li class="mb-5 col-md-4 col-xl-3">
-        <img src="{{ urlimg }}">
-        <p>TITOLO: {{ titolo }} <br> TITOLO ORIGINALE: {{ titolo_originale}} <br> LINGUA: {{{ lingua }}} <br> VOTO: {{ voto }}</p>
-        <i class="far fa-star check"></i><i class="far fa-star check"></i><i class="far fa-star check"></i><i class="far fa-star check"></i><i class="far fa-star check"></i>
+        <div class="box-poster-film">
+          <img class="flyers" src="{{ urlimg }}">
+          <div class="box-details-film">
+            <p><b>TITOLO:</b><br> {{ titolo }} <br><b>TITOLO ORIGINALE:</b><br> {{ titolo_originale}} <br><b> LINGUA:</b><br> {{{ lingua }}} <br><b> VOTO:</b><br> {{ voto }}</p>
+            <i class="far fa-star check"></i><i class="far fa-star check"></i><i class="far fa-star check"></i><i class="far fa-star check"></i><i class="far fa-star check"></i>
+          </div>
+        </div>
       </li>
     </script>
   </head>

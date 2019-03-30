@@ -12,7 +12,6 @@ p{
   color: #FFB400;
 }
 
-
 #title, .inputstyle, .container-home{
   transition: all .5s ease-out;
 }
@@ -59,4 +58,31 @@ p{
 .ajaxcontainer{
   margin-top: 200px;
   display: none;
+}
+
+.box-poster-film{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.box-details-film{
+  padding-top: 25%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+}
+
+.flyers{
+  object-fit: cover;
+  max-width: 100%;
+  height: 100%;
+  box-shadow: 5px 5px 10px black;
+}
+
+.box-poster-film:hover .box-details-film{
+  display: block;
 }
