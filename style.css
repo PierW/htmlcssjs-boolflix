@@ -12,7 +12,7 @@ p{
   color: #FFB400;
 }
 
-#title, .inputstyle, .container-home{
+#title, .inputstyle, .container-home, .box-details-film{
   transition: all .5s ease-out;
 }
 
@@ -73,7 +73,7 @@ p{
   position: absolute;
   top: 0;
   background-color: rgba(0, 0, 0, 0.9);
-  display: none;
+  opacity: 0;
 }
 
 .flyers{
@@ -84,5 +84,5 @@ p{
 }
 
 .box-poster-film:hover .box-details-film{
-  display: block;
+  opacity: 1;
 }
