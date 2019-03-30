@@ -2,6 +2,12 @@ p{
   margin-bottom: 0;
 }
 
+li{
+  max-width: 350px;
+  height: 450px;
+  margin: auto;
+}
+
 .flag-icon-unknown{
   background-image: url("img/unknown.svg");
   height: 1.5em;
@@ -78,7 +84,7 @@ p{
 
 .flyers{
   object-fit: cover;
-  max-width: 100%;
+  width: 100%;
   height: 100%;
   box-shadow: 5px 5px 10px black;
 }
