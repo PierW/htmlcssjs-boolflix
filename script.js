@@ -32,7 +32,7 @@ function getTitle() {
 //INIZIO FUNZIONE PER TRIGGERARE IL PULSANTE PREMUTO
 function pressEnter(e) {
 
-  var me = $(this);
+  // var me = $(this); Non serve dato che non voglio salvare/passare il valore dell'input da questa funzione
   if (e.which == 13) {
 
     getTitle();
